@@ -13,7 +13,7 @@ class App extends React.Component {
   
 }
 
-export default connect()(App);
+export default (App);
 
 // connect = store.dispatch({type: 'FETCH_CATEGORIES', payload: {name: 'Wau'}})
 // Thunk/middleware: allows to call dispatch in actionCreator to wait for request to finish before we dispatch to reducer
