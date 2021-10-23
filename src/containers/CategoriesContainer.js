@@ -14,7 +14,7 @@ class CategoriesContainer extends React.Component {
         return (
             <div>
                 <CategoryInput />
-                <Categories /> 
+                <Categories categories={this.props.categories}/> 
             </div>
         )
     }
@@ -26,5 +26,5 @@ const mapStateToProps = state => {
     }
 }
 
-dispatch({type})
+// dispatch({type})
 export default connect(mapStateToProps, {fetchCategories})(CategoriesContainer); 

@@ -4,7 +4,7 @@ const Categories = (props) => {
     
     return (
         <div>
-            Categories
+            {props.categories.map(category => <li key={category.id}>{category.name}</li> )}
         </div>
     )
 }
