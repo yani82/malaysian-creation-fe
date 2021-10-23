@@ -1,11 +1,11 @@
 import React from 'react';
+import {connect} from 'react-redux'; 
+import {fetchCategories} from './actions/fetchCategories'; 
 
 class App extends React.Component {
 
   componentDidMount() {
-    fetch('http://localhost:3000/api/v1/categories')
-    .then(response => response.json())
-    .then(data => console.log(data))
+    this.props.fetchCategories({type: 'FETCH_CATEGORIES', payload: {name: 'Wau'}})
   }
 
   render() {
@@ -18,4 +18,7 @@ class App extends React.Component {
   
 }
 
-export default App;
+export default connect(null, {fetchCategories})(App);
+
+// connect = store.dispatch({type: 'FETCH_CATEGORIES', payload: {name: 'Wau'}})
+// Thunk/middleware: allows to call dispatch in actionCreator to wait for request to finish before we dispatch to reducer
