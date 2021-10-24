@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import { fetchCategories } from '../actions/fetchCategories'; 
+import {fetchCategories} from '../actions/fetchCategories'; 
 import Categories from '../components/Categories';
 import CategoryInput from '../components/CategoryInput';
 
@@ -13,7 +13,7 @@ class CategoriesContainer extends React.Component {
     render() {
         return (
             <div>
-                <CategoryInput /><br/>
+                <CategoryInput/><br/>
                 <Categories categories={this.props.categories}/> 
             </div>
         )

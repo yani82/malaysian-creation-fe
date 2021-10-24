@@ -7,7 +7,7 @@ export default function categoryReducer(state = {categories: []}, action) {
             return {...state, categories: [...state.categories, action.payload]}
         default: 
             return state 
-        // so you always return some version of your state 
+        // default: so you always return some version of your state 
     }
 }
 
