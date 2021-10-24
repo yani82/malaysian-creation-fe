@@ -13,7 +13,7 @@ class CategoriesContainer extends React.Component {
     render() {
         return (
             <div>
-                <CategoryInput />
+                <CategoryInput /><br/>
                 <Categories categories={this.props.categories}/> 
             </div>
         )
