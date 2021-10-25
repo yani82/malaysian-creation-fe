@@ -1,4 +1,5 @@
 import React from 'react';
+import {Route} from 'react-router-dom'; 
 import Category from './Category';
 
 const Categories = (props) => {
