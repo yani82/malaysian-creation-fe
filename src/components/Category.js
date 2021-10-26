@@ -1,8 +1,7 @@
 import React from 'react'
+import {Redirect} from 'react-router-dom'; 
 
 const Category = (props) => {
-
-    console.log(props)
 
     let category = props.categories[props.match.params.id - 1]
     console.log(category)
