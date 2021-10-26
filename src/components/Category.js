@@ -1,5 +1,6 @@
 import React from 'react'
 import {Redirect} from 'react-router-dom'; 
+import ItemsContainer from '../containers/ItemsContainer';
 
 const Category = (props) => {
 
@@ -7,9 +8,12 @@ const Category = (props) => {
     console.log(category)
 
     return (
-        <li>
-            {category ? category.name : null}  
-        </li>
+        <div>
+            <h2>
+                {category ? category.name : null}  
+            </h2>
+            <ItemsContainer />
+        </div>
     )
 }
 
