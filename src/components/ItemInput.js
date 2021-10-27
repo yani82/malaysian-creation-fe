@@ -1,42 +1,48 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {addCategory} from '../actions/addCategory'; 
+// import {addCategory} from '../actions/addCategory'; 
 
 class ItemInput extends React.Component {
 
-    // state = {
-    //     name: '',
-    //     description: '',
-    //     price: ''
-    // }
+    state = {
+        name: '',
+        description: '',
+        price: ''
+    }
 
-    // handleChange = (event) => {
-    //     this.setState({
-    //         [event.target.name]: event.target.value 
-    //     })
-    // }
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value 
+            // [] to evaluate the value of event.target.name 
+        })
+    }
 
-    // handleSubmit = (event) => {
-    //     event.preventDefault()
-    //     this.props.addCategory(this.state)
-    //     this.setState({
-    //         name: ''
-    //     })
-    // }
+    handleSubmit = (event) => {
+        event.preventDefault()
+        this.props.addItem(this.state)
+        this.setState({
+            name: '',
+            description: '',
+            price: ''
+        })
+    }
 
     render() {
         return (
             <div>
-                ItemInput
-                {/*<form onSubmit={this.handleSubmit}> 
-                    <label>Submit Category: </label>
-                    <input type='text' placeholder='Name' value={this.state.name} name="name" onChange={this.handleChange}/><br/><br/>  
-                    <input type="submit"/>
-                </form> */} 
+                <form onSubmit={this.handleSubmit}>
+                    <label>Item Name: </label>
+                    <input type='text' name='name' value={this.state.name} onChange={this.handleChange}/><br />
+                    <label>Description: </label>
+                    <input type='text' name='description' value={this.state.description} onChange={this.handleChange}/><br />
+                    <label>Price: </label>
+                    <input type='text' name='amount' value={this.state.price} onChange={this.handleChange}/><br />
+                    <input type="submit"/><br />
+                </form> 
             </div>
         )
     }
 }
 
 // export default connect(null, {addCategory})(ItemInput);
-export default ItemInput;
+export default connect(null)(ItemInput);

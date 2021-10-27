@@ -6,7 +6,7 @@ class ItemsContainer extends React.Component {
     render() {
         return (
             <div>
-                <ItemInput /> 
+                <ItemInput category={this.props.category}/> 
                 <Items items={this.props.category && this.props.category.items}/>
             </div>
         )
