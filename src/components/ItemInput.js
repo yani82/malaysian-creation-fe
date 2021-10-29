@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-// import {addCategory} from '../actions/addCategory'; 
+import {addItem} from '../actions/addItem'; 
 
 class ItemInput extends React.Component {
 
@@ -19,7 +19,7 @@ class ItemInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.addItem(this.state)
+        this.props.addItem(this.state, this.props.category.id)
         this.setState({
             name: '',
             description: '',
@@ -36,7 +36,7 @@ class ItemInput extends React.Component {
                     <label>Description: </label>
                     <input type='text' name='description' value={this.state.description} onChange={this.handleChange}/><br />
                     <label>Price: </label>
-                    <input type='text' name='amount' value={this.state.price} onChange={this.handleChange}/><br />
+                    <input type='float' name='price' value={this.state.price} onChange={this.handleChange}/><br />
                     <input type="submit"/><br />
                 </form> 
             </div>
@@ -45,4 +45,4 @@ class ItemInput extends React.Component {
 }
 
 // export default connect(null, {addCategory})(ItemInput);
-export default connect(null)(ItemInput);
+export default connect(null, {addItem})(ItemInput);
