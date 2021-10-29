@@ -14,7 +14,7 @@ export default function categoryReducer(state = {categories: []}, action) {
                     return category 
                 }
             })
-            return {...state, categories: categories} 
+            return {...state, categories: categories}
         default: 
             return state 
         // default: so you always return some version of your state 

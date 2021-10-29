@@ -19,6 +19,7 @@ class ItemInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
+        // mapping as props, sending state and id in addItem, posting it and dispatching to reducer
         this.props.addItem(this.state, this.props.category.id)
         this.setState({
             name: '',
