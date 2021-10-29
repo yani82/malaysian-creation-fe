@@ -37,8 +37,8 @@ class ItemInput extends React.Component {
                     <label>Description: </label>
                     <input type='text' name='description' value={this.state.description} onChange={this.handleChange}/><br />
                     <label>Price: </label>
-                    <input type='float' name='price' value={this.state.price} onChange={this.handleChange}/><br />
-                    <input type="submit"/><br />
+                    <input type='float' name='price' value={this.state.price} onChange={this.handleChange}/><br /><br />
+                    <input type="submit"/><br /><br />
                 </form> 
             </div>
         )
