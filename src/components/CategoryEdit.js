@@ -16,7 +16,8 @@ class CategoryEdit extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.editCategory(this.state)
+        let category = {...this.state, id: this.props.category.id}
+        this.props.editCategory(category)
         this.setState({
             name: ''
         })

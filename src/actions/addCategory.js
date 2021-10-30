@@ -10,7 +10,7 @@ export const addCategory = (data) => {
             body: JSON.stringify(data) 
         })
         .then(response => response.json())
-        .then(category => dispatch({type: 'ADD_ACCOUNT', payload: category}))
+        .then(category => dispatch({type: 'ADD_CATEGORY', payload: category}))
     }
 
 } 
