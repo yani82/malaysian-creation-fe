@@ -7,7 +7,7 @@ const Items = (props) => {
     console.log(props.items)
 
     const handleDelete = (item) => {
-        debugger;
+        // debugger;
         props.deleteItem(item.id, item.category_id)
     }
     
