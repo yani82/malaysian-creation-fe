@@ -5,6 +5,7 @@ import {fetchCategories} from '../actions/fetchCategories';
 import Categories from '../components/Categories';
 import Category from '../components/Category';
 import CategoryInput from '../components/CategoryInput';
+import Home from '../components/Home'
 
 class CategoriesContainer extends React.Component {
 
@@ -16,6 +17,7 @@ class CategoriesContainer extends React.Component {
         return (
             <div>
                 <switch>
+                    <Route exact path='/' render={props => (<Home {...props} />)}/>
                     <Route path='/categories/new' component={CategoryInput}/>
                     <br/>
                     <Route path='/categories/:id' render={(routerProps) => <Category {...routerProps} categories={this.props.categories} /> } />
