@@ -1,6 +1,6 @@
 # Malaysian Creation
 
-<iframe src="https://giphy.com/embed/zMe4UQEtzUgZWL4neq" width="480" height="320" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/ninjavanmalaysia-malaysia-merdeka-ninja-van-zMe4UQEtzUgZWL4neq">via GIPHY</a></p>
+![](https://media.giphy.com/media/zMe4UQEtzUgZWL4neq/giphy.gif)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
