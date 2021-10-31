@@ -19,6 +19,7 @@ class ItemInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
+        // console.log(this.state, this.props.category.id)
         // mapping as props, sending state and id in addItem, posting it and dispatching to reducer
         this.props.addItem(this.state, this.props.category.id)
         this.setState({
@@ -45,5 +46,15 @@ class ItemInput extends React.Component {
     }
 }
 
+// const MSP = (globalState) => {
+//     return globalState
+// }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addItem: (item, categoryId) => dispatch(addItem(item, categoryId))
+    }
+}
+
 // export default connect(null, {addCategory})(ItemInput);
-export default connect(null, {addItem})(ItemInput);
+export default connect(null, mapDispatchToProps)(ItemInput);

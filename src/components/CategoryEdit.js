@@ -37,4 +37,14 @@ class CategoryEdit extends React.Component {
     }
 }
 
-export default connect(null, {editCategory})(CategoryEdit);
+// const MSP = (globalState) => {
+//     return globalState
+// }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        editItem: (item) => dispatch(editCategory())
+    }
+}
+
+export default connect(null, mapDispatchToProps)(CategoryEdit);
