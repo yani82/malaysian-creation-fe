@@ -8,8 +8,9 @@ export default function categoryReducer(state = {categories: []}, action) {
             return {...state, categories: [...state.categories, action.payload]}
         case 'ADD_ITEM': 
             let categories = state.categories.map(category => {
-                if (category.id === action.payload.id) {
-                    return action.payload
+                if (category.id === action.payload.category_id) {
+                    // debugger; 
+                    return {...category, items: [...category.items, action.payload]}
                 } else {
                     return category 
                 }

@@ -5,8 +5,8 @@ import ItemsContainer from '../containers/ItemsContainer';
 
 const Category = (props) => {
 
-    // let category = props.categories[props.match.params.id - 1]
-    let category = props.categories.filter(category => category.id == props.match.params.id)[0] 
+    let category = props.categories[props.match.params.id - 1]
+    // let category = props.categories.filter(category => category.id == props.match.params.id)[0] 
 
     console.log(category)
 
