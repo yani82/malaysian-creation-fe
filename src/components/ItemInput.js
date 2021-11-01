@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {addItem} from '../actions/addItem'; 
+import {fetchItems} from '../actions/fetchItems';
 
 class ItemInput extends React.Component {
 
@@ -8,6 +9,14 @@ class ItemInput extends React.Component {
         name: '',
         description: '',
         price: ''
+    }
+
+    componentDidMount() {
+        // let items = this.props.fetchItems(this.props["category"]["id"])
+        // let items = this.props.fetchItems(1)
+        // this.setState({
+        //     items: items  
+        // })
     }
 
     handleChange = (event) => {
@@ -30,6 +39,7 @@ class ItemInput extends React.Component {
     }
 
     render() {
+        
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
@@ -52,7 +62,8 @@ class ItemInput extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addItem: (item, categoryId) => dispatch(addItem(item, categoryId))
+        addItem: (item, categoryId) => dispatch(addItem(item, categoryId)), 
+        fetchItems: (categoryId) => dispatch(fetchItems(categoryId))
     }
 }
 

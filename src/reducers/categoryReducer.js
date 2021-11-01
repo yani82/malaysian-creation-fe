@@ -34,6 +34,8 @@ export default function categoryReducer(state = {categories: []}, action) {
             }
         })
         return {...state, categories: categoryEdit}
+    case 'FETCH_ITEMS': 
+        return {items: action.payload} 
         default: 
             return state 
         // default: so you always return some version of your state 

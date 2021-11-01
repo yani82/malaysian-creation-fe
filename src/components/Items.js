@@ -20,4 +20,4 @@ const Items = (props) => {
     )
 }
 
-export default connect(null, {deleteItem})(Items); 
+export default Items; 

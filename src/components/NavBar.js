@@ -12,19 +12,19 @@ export default function NavBar() {
                     exact 
                     activeClassName="text-white"
                     className="inflex-flex items-center py-6 px-3 mr-4 text-red-100 hover:text-green-800 text-4xl font-bold cursive tracking-widest">
-                        My Malaysia
+                        MLYSNCreation
                     </NavLink>
-                    <NavLink to ="/about"
+                    {/* <NavLink to ="/about"
                     className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-green-800"
                     activeClassName="text-red-100 bg-red-700">
-                        About Malaysian Creation 
-                    </NavLink>
+                        About MLYSNCreation 
+                    </NavLink> */}
                     <NavLink to ="/categories"
                     className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-green-800"
                     activeClassName="text-red-100 bg-red-700">
                         Categories
                     </NavLink>
-                    <NavLink to =`categories/${category.id}/items`
+                    <NavLink to ="/items"
                     className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-green-800"
                     activeClassName="text-red-100 bg-red-700">
                         Items
