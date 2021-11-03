@@ -1,5 +1,5 @@
 export const editCategory = (data) => {
-    // debugger; 
+     
     return (dispatch) => {
         fetch(`http://localhost:3000/api/v1/categories/${data.id}`, {
             headers: {
