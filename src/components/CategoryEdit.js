@@ -26,7 +26,6 @@ class CategoryEdit extends React.Component {
     render() {
         return (
             <div>
-                {/* controlled form */}
                 <form onSubmit={this.handleSubmit}> 
                     <br />
                     <label>Edit Category: </label>

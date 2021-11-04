@@ -1,9 +1,7 @@
 import React from 'react';
-import {Route, Link} from 'react-router-dom'; 
-import Category from './Category';
+import {Link} from 'react-router-dom'; 
 
 const Categories = (props) => {
-    console.log(props)
     
     return (
         <div>
