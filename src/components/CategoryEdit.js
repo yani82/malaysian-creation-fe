@@ -37,10 +37,6 @@ class CategoryEdit extends React.Component {
     }
 }
 
-// const MSP = (globalState) => {
-//     return globalState
-// }
-
 const mapDispatchToProps = (dispatch) => {
     return {
         editItem: (item) => dispatch(editCategory())

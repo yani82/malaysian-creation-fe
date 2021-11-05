@@ -8,7 +8,7 @@ import {connect} from 'react-redux';
 class ItemsListContainer extends Component {
      componentDidMount() {
         this.props.fetchItems()
-        // debugger; 
+        
     }
 
     render() {

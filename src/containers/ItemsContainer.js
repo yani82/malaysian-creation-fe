@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {fetchItems} from '../actions/fetchItems'; 
 import ItemInput from '../components/ItemInput';
 import Items from '../components/Items';
-import ItemsList from '../components/ItemsList';
+// import ItemsList from '../components/ItemsList';
 
 class ItemsContainer extends React.Component {
    

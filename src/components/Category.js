@@ -4,7 +4,6 @@ import ItemsContainer from '../containers/ItemsContainer';
 // import ItemsListContainer from '../containers/ItemsListContainer';
 
 const Category = (props) => {
-    console.log("categories.js", props.category)
 
     let category = props.categories[props.match.params.id - 1]
     // let category = props.categories.filter(category => category.id == props.match.params.id)[0] 

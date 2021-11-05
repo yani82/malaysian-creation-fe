@@ -1,12 +1,9 @@
-import {connect} from 'react-redux';
-import {deleteItem} from '../actions/deleteItem';
+// import {connect} from 'react-redux';
+// import {deleteItem} from '../actions/deleteItem';
 
 const Items = (props) => {
 
-    console.log(props.items)
-
     const handleDelete = (item) => {
-        // debugger;
         props.deleteItem(item.id, item.category_id)
     }
     
