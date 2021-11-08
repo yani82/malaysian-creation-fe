@@ -11,8 +11,6 @@ import App from './App';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 let createdStore = createStore(categoryReducer, composeEnhancers(applyMiddleware(thunk))); 
-// middleware: allow redux to work with async requests
-// to pass redux functions instead of objects 
 
 ReactDOM.render(
   <Provider store={createdStore}>

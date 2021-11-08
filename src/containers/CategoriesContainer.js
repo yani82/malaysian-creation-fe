@@ -27,13 +27,9 @@ class CategoriesContainer extends React.Component {
                     <br/>
                     <Route path='/categories/:id' render={(routerProps) => <Category {...routerProps} categories={this.props.categories} /> } />
                     <Route exact path='/categories' render={(routerProps) => <Categories {...routerProps} categories={this.props.categories} /> } />
-                    {/* <Route exact path='/categories/:id/items' render={(routerProps) => <Items {...routerProps} items={this.props.items} /> } /> */}
                     <Route exact path='/items' render={(routerProps) => <Items {...routerProps} items={this.props.items} /> } />
                 </switch>
-            </div>
-            // switch: returns the first path that matches, it makes sure that we only see the new route, don't need to use 'exact' 
-            //  deconstruction 
-            // routerProps is coming react-router-dom Route component, allows your to traverse/ can use any functions to navigate by code, also access URL, params :id 
+            </div>  
             
         )
     }
@@ -59,7 +55,3 @@ const mapStateToProps = globalState => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CategoriesContainer);
-// connect to redux, working with the provider, the global state and dispatch function to send action to reducer (updates reducer)
-// MSP works with the GLOBAL STATE 
-// MDP access redux dispatch function, makes a COPY of those action creators that copy is connected to Redux because it has access dispatch function 
-// MSP and MDP returns object to component through props 
