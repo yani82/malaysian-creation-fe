@@ -9,6 +9,7 @@ import Items from '../components/Items';
 class ItemsContainer extends React.Component {
    
     render() {
+        console.log(this.props.category.items)
         return (
             <div>
                 <ItemInput category={this.props.category}/> 
@@ -20,7 +21,7 @@ class ItemsContainer extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        items: state.items 
+        items: state.items
     }
 }
 

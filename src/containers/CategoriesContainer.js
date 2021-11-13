@@ -13,8 +13,11 @@ import NavBar from "../components/NavBar";
 class CategoriesContainer extends React.Component {
 
     componentDidMount() {
+        console.log("a")
         this.props.fetchCategoriesWithRedux();
+        console.log("b")
         this.props.fetchItemsWithRedux();
+        console.log("e")
     }
 
     render() {
