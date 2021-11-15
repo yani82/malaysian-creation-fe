@@ -1,15 +1,12 @@
 import {connect} from 'react-redux';
 import {sortItemsBy} from '../actions/sortItemsBy';
 // import {deleteItem} from '../actions/deleteItem';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 const Items = ({ items, deleteItem, sortItemsBy }) => {
-    const defaultSortType = 'date'
+    const defaultSortType = 'name'
     const [sortType, setSortType] = useState(defaultSortType)
 
-    // useEffect(() => {
-    //     sortItemsBy(sortType)
-    // })
 
     // 1. - Create a button 
     // - that sorts the items by their names when clicked 
@@ -39,8 +36,14 @@ const Items = ({ items, deleteItem, sortItemsBy }) => {
     return (
         <div>
             <button onClick={() => {
-            
-                sortItemsBy(sortType)
+                
+                sortItemsBy(sortType) 
+    
+                if (sortType === 'name') {
+                    setSortType('id') 
+                } else if (sortType === 'id') {
+                    setSortType('name') 
+                }
             }}>Sort by name</button>
             
             {/* props.items is a check so it doesn't return undefined */}

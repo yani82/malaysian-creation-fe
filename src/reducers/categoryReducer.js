@@ -35,22 +35,21 @@ export default function categoryReducer(state = {categories: []}, action) {
     case 'FETCH_ITEMS': 
         return {...state, items: action.payload} 
     case 'SORT_ITEMS': 
-        const {sortType} = action.payload
-        // Sort by name
-        state.items.sort(function(a, b) {
-            if(a.name.toLowerCase() < b.name.toLowerCase()) return -1;
-            if(a.name.toLowerCase() > b.name.toLowerCase()) return 1;
-            return 0; 
-        })
-        // Sort by id
-        state.id.sort(
-            (a, b) => {
-                
-                return a.id - b.id 
-            })   
+        const sortType = action.payload
+        
+        if (sortType === 'name') {
+            state.items.sort(function(a, b) {
+                if(a.name.toLowerCase() < b.name.toLowerCase()) return -1;
+                if(a.name.toLowerCase() > b.name.toLowerCase()) return 1;
+                return 0; 
+            })
+        } else { 
+            state.items.sort((a, b) => a.id - b.id)
+        }
+        
         return {
             ...state,
-            id: [...state.id]
+            items: [...state.items]
         }
     default: 
         return state
