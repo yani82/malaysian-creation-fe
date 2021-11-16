@@ -7,38 +7,38 @@ import React, { Component } from 'react'
 // 5. When user keys in 'goodbye' the number 5 increaments to 12 and so 
 // Make YouTube video of the challenge, reset inputs, explain the code that made it work, unlisted and then Slack 
 // End of day tomorrow 
-
 export class Click extends Component {
-    constructor(props) {
-        super()
   
-        this.state = {
-        text: '',
-        number: 0
+        state = {
+        textInput: '',
+        number: 0,
     }
-}
 
     handleChange = (event) => {
-        // debugger; 
         event.preventDefault()
         this.setState({
-            text: event.target.value  
+            textInput: event.target.value  
         })
     }
 
-    // handleNumberChange = (event) => {
-    //     event.preventDefault()
-    //     this.setState({
-    //         number: parseInt(event.target.value)
-    //     })
-    // }
+    handleNumberChange = () => {
+        this.setState({
+            number: this.state.number + this.state.textInput.length,
+            textInput: ''
+        })
+
+    }
 
     render() {
         return (
             <div>    
-                <input type='text' placeholder='Click Me' onChange={this.handleChange}/><br/><br/> 
-                <button>Click Me!</button><br /> 
-                <number>{this.state.number}</number>
+                <input 
+                type="text"
+                value={this.state.textInput} 
+                onChange={this.handleChange}
+                /><br/><br/> 
+                <button onClick={this.handleNumberChange}>Click Me!</button><br /> 
+                <p>{this.state.number}</p>
             </div>
         )
     }
