@@ -2,6 +2,7 @@ import React from 'react'
 import CategoryEdit from './CategoryEdit';
 import ItemsContainer from '../containers/ItemsContainer';
 // import ItemsListContainer from '../containers/ItemsListContainer';
+import Click from './Click';
 
 const Category = (props) => {
 
@@ -18,6 +19,7 @@ const Category = (props) => {
             <ItemsContainer category={category}/>
             {/* <ItemsListContainer /> */}
             <CategoryEdit category={category}/>
+            <Click />
         </div>
     )
 }

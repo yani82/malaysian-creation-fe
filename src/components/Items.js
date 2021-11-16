@@ -12,23 +12,6 @@ const Items = ({ items, deleteItem, sortItemsBy }) => {
     // - that sorts the items by their names when clicked 
     // 2. then when clicked again it unsorts/it goes back to its original order 
 
- // = this.props.item 
-    //     .sort(function(a, b) {
-    //     if(a.name.toLowerCase() < b.name.toLowerCase()) return -1;
-    //     if(a.name.toLowerCase() > b.name.toLowerCase()) return 1;
-    //      return 0; 
-    //  })
-
-    // const [itemList, setItemList] = useState(props)
-
-    // const sortByName = () => {
-    //     const sorted = itemList.sort((a, b) => {
-    //         return b.name - a.name;
-    //     });
-    //     setItemList(sorted);
-    //     alert(sorted[0].name);
-    // };
-
     const handleDelete = (item) => {
         deleteItem(item.id, item.category_id)
     }
