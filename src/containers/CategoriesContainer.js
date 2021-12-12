@@ -9,7 +9,7 @@ import CategoryInput from '../components/CategoryInput';
 import Items from '../components/Items';
 import Home from '../components/Home';
 import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
+
 
 class CategoriesContainer extends React.Component {
 
@@ -30,7 +30,6 @@ class CategoriesContainer extends React.Component {
                     <Route exact path='/categories' render={(routerProps) => <Categories {...routerProps} categories={this.props.categories} /> } />
                     <Route exact path='/items' render={(routerProps) => <Items {...routerProps} items={this.props.items} /> } />
                 </switch>
-                <Footer />
             </div>  
             
         )
