@@ -8,7 +8,6 @@ import Category from '../components/Category';
 import CategoryInput from '../components/CategoryInput';
 import Items from '../components/Items';
 import Home from '../components/Home';
-import NavBar from "../components/NavBar";
 
 
 class CategoriesContainer extends React.Component {
@@ -21,7 +20,6 @@ class CategoriesContainer extends React.Component {
     render() {
         return (
             <div>
-                <NavBar />
                 <switch>
                     <Route exact path='/' render={props => (<Home {...props} />)}/>
                     <Route path='/categories/new' component={CategoryInput}/>
