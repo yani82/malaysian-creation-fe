@@ -19,7 +19,7 @@ const Category = (props) => {
             <ItemsContainer category={category}/>
             {/* <ItemsListContainer /> */}
             <CategoryEdit category={category}/>
-            <Click />
+            {/* <Click /> */}
         </div>
     )
 }
