@@ -5,12 +5,7 @@ import React, { useState } from 'react';
 
 const Items = ({ items, deleteItem, sortItemsBy }) => {
     const defaultSortType = 'name'
-    const [sortType, setSortType] = useState(defaultSortType)
-
-
-    // 1. - Create a button 
-    // - that sorts the items by their names when clicked 
-    // 2. then when clicked again it unsorts/it goes back to its original order 
+    const [sortType, setSortType] = useState(defaultSortType) 
 
     const handleDelete = (item) => {
         deleteItem(item.id, item.category_id)
