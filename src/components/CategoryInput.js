@@ -26,7 +26,6 @@ class CategoryInput extends React.Component {
         console.log(this.props)
         return (
             <div>
-                {/* controlled form */}
                 <form onSubmit={this.handleSubmit}> 
                     <label>New Category: </label>
                     <input type='text' placeholder='Name' value={this.state.name} name="name" onChange={this.handleChange}/><br/><br/>  
