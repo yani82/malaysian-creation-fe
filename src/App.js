@@ -1,4 +1,6 @@
 import React from 'react';
+import {Switch, Route} from 'react-router-dom';
+import Login from "./components/registerations/Login";
 // import {connect} from 'react-redux'; 
 import CategoriesContainer from './containers/CategoriesContainer';
 import NavBar from "./components/NavBar"; 
@@ -9,6 +11,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavBar />
+        <switch>
+          <Route exact path='/' component={Login}/>
+        </switch>
         <CategoriesContainer />
         <Footer />
       </div>
