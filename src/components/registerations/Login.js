@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 
 class Login extends Component {
     state = {
+        username: "",
         email: "",
-        password: ""
+        password: "",
+        errors: ""
     }
     
     handleChange = (e) => {
