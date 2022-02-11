@@ -11,6 +11,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavBar />
+        <button>Sign-up</button>
+        <Popup trigger={true}>
+          <h3>Sign-up</h3>
+        </Popup>
         <switch>
           <Route exact path='/' component={Login}/>
         </switch>
