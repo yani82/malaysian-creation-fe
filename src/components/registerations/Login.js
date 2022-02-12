@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 
 class Login extends Component {
-    state = {
-        username: "",
-        email: "",
-        password: "",
-        errors: ""
-    }
+    constructor(props) {
+        super(props);
+        this.state = {
+            username: "",
+            email: "",
+            password: "",
+            errors: ""
+    };
+}
     
     handleChange = (e) => {
         const {name, value} = e.target 
@@ -15,6 +18,11 @@ class Login extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
+        const {username, email, password} = this.state
+
+        let user = {
+            
+        }
     }
 
   render() {
