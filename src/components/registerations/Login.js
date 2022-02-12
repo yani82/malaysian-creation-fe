@@ -29,9 +29,24 @@ class Login extends Component {
 
         axios.post('http://localhost:3001/v1/login', {user}, {withCredentials: true}).then(response => {
             if (response.data.logged_in) {
-                
+                this.props.handleLogin(response)
+
+                this.redirect()
+            } else {
+                this.setState({
+                    errors: response.data.error
+                })
             }
         })
+        .catch(error => ('login api erros:', error)) 
+    };
+
+    redirect = () => {
+        this.props.history.push('/items')
+    }
+
+    handleErrors = () => {
+        
     }
 
   render() {
