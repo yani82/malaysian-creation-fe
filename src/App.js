@@ -5,16 +5,18 @@ import Login from "./components/registerations/Login";
 import CategoriesContainer from './containers/CategoriesContainer';
 import NavBar from "./components/NavBar"; 
 import Footer from "./components/Footer";
+import Signup from './components/registerations/Signup';
 class App extends React.Component {
 
   render() {
+
     return (
       <div className="App">
         <NavBar />
         <button>Sign-up</button>
-        <Popup trigger={true}>
-          <h3>Sign-up</h3>
-        </Popup>
+        <Signup trigger={true}>
+          <h3>Let's Sign You Up!</h3>
+        </Signup>
         <switch>
           <Route exact path='/' component={Login}/>
         </switch>
