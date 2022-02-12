@@ -60,19 +60,14 @@ class Login extends Component {
       const {username, email, password} = this.state
     return (
     <div>
-        <form onSubmit={this.handleSubmit}>
-            <input type="email" 
-            name="email"
-            placeholder="email..."
-            required onChange={this.handleChange}/>
-            <input type="password"
-            name="password"
-            placeholder="password..."
-            required onChange={this.handleChange}/>
-            <button onSubmit={this.handleSubmit}>Log In</button>
-        </form>
+        <SignIn username={username} email={email} password={password} handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
+    <div>
+        {
+            this.state.errors ? this.handleErrors() : null 
+        }
+        </div>
     </div>
-    )
+    );
   }
 }
 

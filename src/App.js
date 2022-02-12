@@ -6,17 +6,29 @@ import CategoriesContainer from './containers/CategoriesContainer';
 import NavBar from "./components/NavBar"; 
 import Footer from "./components/Footer";
 import Signup from './components/registerations/Signup';
+import Login from './components/registerations/Login';
 class App extends React.Component {
 
   render() {
 
     return (
       <div className="App">
+        {/* <div className='flex flex-wrap justify-center mt-20'>
+          <div className='w-full max-w-sm'></div>
+            <form action="" className='shadown-md bg-white rounded px-8 pt-6 pb-8 mb-4'></form>
+            <div className='mb-5'>
+              <label htmlFor="" className='block text-gray-700 text-sm font-bold mb-2'>
+                Username
+              </label>
+              <input className='shadow'></input>
+            </div>
+        </div> */}
         <NavBar />
-        <button>Sign-up</button>
+        {/* <button>Sign-up</button>
         <Signup trigger={true}>
           <h3>Let's Sign You Up!</h3>
-        </Signup>
+        </Signup> */}
+        <Login />
         <switch>
           <Route exact path='/' component={Login}/>
         </switch>
