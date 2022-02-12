@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { Component } from 'react';
 
 class Login extends Component {
@@ -21,8 +22,16 @@ class Login extends Component {
         const {username, email, password} = this.state
 
         let user = {
-            
+            username: username,
+            email: email,
+            password: password
         }
+
+        axios.post('http://localhost:3001/v1/login', {user}, {withCredentials: true}).then(response => {
+            if (response.data.logged_in) {
+                
+            }
+        })
     }
 
   render() {
