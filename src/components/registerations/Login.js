@@ -46,10 +46,18 @@ class Login extends Component {
     }
 
     handleErrors = () => {
-        
+        return (
+            <div>
+                <ul>
+                    {this.state.errors.localeCompare(error => {alert(error)})}
+                </ul>
+            </div>
+        )
     }
 
   render() {
+    //   do you have to const declare the state this often? 
+      const {username, email, password} = this.state
     return (
     <div>
         <form onSubmit={this.handleSubmit}>
