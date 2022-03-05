@@ -1,5 +1,7 @@
 import axios from 'axios';
 import React, { Component } from 'react';
+import Signin from '../registerations/Signin'
+
 
 class Login extends Component {
     constructor(props) {
@@ -60,7 +62,6 @@ class Login extends Component {
       const {username, email, password} = this.state
     return (
     <div>
-        <SignIn username={username} email={email} password={password} handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
     <div>
         {
             this.state.errors ? this.handleErrors() : null 
