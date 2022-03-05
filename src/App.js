@@ -5,7 +5,7 @@ import Login from "./components/registerations/Login";
 import CategoriesContainer from './containers/CategoriesContainer';
 import NavBar from "./components/NavBar"; 
 import Footer from "./components/Footer";
-// import Signup from './components/registerations/Signup';
+import Signup from './components/registerations/Signup';
 class App extends React.Component {
 
   render() {
