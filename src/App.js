@@ -1,11 +1,11 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
-import Login from "./components/registerations/Login";
+import Login from "./components/registrations/Login";
 // import {connect} from 'react-redux'; 
 import CategoriesContainer from './containers/CategoriesContainer';
 import NavBar from "./components/NavBar"; 
 import Footer from "./components/Footer";
-import Signup from './components/registerations/Signup';
+import Signup from './components/registrations/Signup';
 class App extends React.Component {
 
   render() {
