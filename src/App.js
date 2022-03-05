@@ -23,11 +23,6 @@ class App extends React.Component {
             </div>
         </div> */}
         <NavBar />
-        {/* <button>Sign-up</button>
-        <Signup trigger={true}>
-          <h3>Let's Sign You Up!</h3>
-        </Signup> */}
-        <Login />
         <switch>
           <Route exact path='/' component={Login}/>
         </switch>
