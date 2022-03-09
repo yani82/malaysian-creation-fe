@@ -8,8 +8,8 @@ const Items = ({ items, deleteItem, sortItemsBy }) => {
     const [sortType, setSortType] = useState(defaultSortType) 
 
     const handleDelete = (item) => {
-        debugger;
-        deleteItem()
+        
+        deleteItem(item.id)
     }
     
     return (

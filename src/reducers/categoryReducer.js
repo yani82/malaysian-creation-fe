@@ -15,6 +15,7 @@ export default function categoryReducer(state = {categories: []}, action) {
             })
             return {...state, categories: categories}
         case 'DELETE_ITEM': 
+        debugger;
         let categoryDel = state.categories.map(category => {
             if (category.id === action.payload.id) {
                 return action.payload
