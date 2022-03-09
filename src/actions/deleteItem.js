@@ -1,7 +1,7 @@
-export const deleteItem = (itemId, categoryId) => {
+export const deleteItem = (itemId) => {
 
     return (dispatch) => {
-        return fetch(`http:localhost:3000/api/v1/categories/${categoryId}/items/${itemId}`, {
+        return fetch(`http:localhost:3000/api/v1/items/${itemId}`, {
             method: 'DELETE'
         })
         .then(response => response.json())
