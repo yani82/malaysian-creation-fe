@@ -14,7 +14,6 @@ let createdStore = createStore(categoryReducer, composeEnhancers(applyMiddleware
 
 ReactDOM.render(
   <Provider store={createdStore}>
-    {/* creating global store and what it consists of, connect */}
     <Router>
     <App />
     </Router>

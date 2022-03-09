@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {sortItemsBy} from '../actions/sortItemsBy';
-// import {deleteItem} from '../actions/deleteItem';
+import {deleteItem} from '../actions/deleteItem';
 import React, { useState } from 'react';
 
 const Items = ({ items, deleteItem, sortItemsBy }) => {
@@ -8,7 +8,8 @@ const Items = ({ items, deleteItem, sortItemsBy }) => {
     const [sortType, setSortType] = useState(defaultSortType) 
 
     const handleDelete = (item) => {
-        deleteItem(item.id, item.category_id)
+        debugger;
+        deleteItem()
     }
     
     return (
@@ -33,4 +34,4 @@ const Items = ({ items, deleteItem, sortItemsBy }) => {
 }
 
 
-export default connect(null, { sortItemsBy })(Items); 
+export default connect({ deleteItem }, { sortItemsBy })(Items); 
