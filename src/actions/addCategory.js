@@ -1,4 +1,4 @@
-export const addCategory = (data) => {
+export const addCategory = (category) => {
     
     return (dispatch) => {
         fetch('http://localhost:3000/api/v1/categories', {
@@ -7,10 +7,10 @@ export const addCategory = (data) => {
                 'Accept': 'application/json'
             },
             method: 'POST', 
-            body: JSON.stringify(data) 
+            body: JSON.stringify(category) 
         })
         .then(response => response.json())
-        .then(category => dispatch({type: 'ADD_CATEGORY', payload: category}))
+        .then(category => dispatch({type: 'ADD_CATEGORY', payload: item}))
     }
 
 } 
